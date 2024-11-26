@@ -5,7 +5,7 @@ theme = 'nightfall'
 pluralizeListTitles= true 
 relativeURLs = true
 enableGitInfo = true
-timeZone = America/Vancouver
+timeZone = 'America/Vancouver'
 
 [menu]
   [[menu.header]]
