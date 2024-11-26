@@ -2,6 +2,7 @@ baseURL = '/'
 languageCode = 'en-us'
 title = 'Terok Noir'
 theme = 'nightfall'
+pluralizelisttitles = false
 
 [menu]
   [[menu.header]]
@@ -23,7 +24,7 @@ theme = 'nightfall'
 
 [params]
 user = "princeton-strong"
-hostname = "deep-space-nine"
+hostname = "deep-space-mine"
   [params.author]
     name = "Terok Noir"  # Website and RSS feed author
     email = "princeton.strong@outlook.com"  # RSS feed email address
