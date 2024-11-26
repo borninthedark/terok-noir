@@ -25,7 +25,7 @@ theme = 'nightfall'
 user = "princeton-strong"
 hostname = "deep-space-nine"
   [params.author]
-    name = "The Sky Pirate's Den"  # Website and RSS feed author
+    name = "The Sky Pirate\'s Den"  # Website and RSS feed author
     email = "princeton.strong@outlook.com"  # RSS feed email address
 
 
