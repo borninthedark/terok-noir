@@ -26,7 +26,7 @@ timeZone = 'America/Vancouver'
     url = "linux"
 
 [params]
-user = "princeton-strong"
+user = "princeton.strong"
 hostname = "deep-space-mine"
   [params.author]
     name = "Terok Noir"  # Website and RSS feed author
