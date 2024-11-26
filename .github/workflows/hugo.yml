@@ -54,6 +54,9 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
+      - name: Install Theme
+        run: git submodule add https://github.com/LordMathis/hugo-theme-nightfall themes/nightfall 
+
       - name: Init Hugo Modules
         run: hugo mod init github.com/LordMathis/hugo-theme-nightfall
 
