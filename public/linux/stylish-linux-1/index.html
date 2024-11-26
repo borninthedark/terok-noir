@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+10 Commonly Used Linux Commands | Terok Noir
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.139.0">
+
+
+<link rel="canonical" href="//localhost:1313/linux/stylish-linux-1/" >
+
+
+
+
+<link href="/css/style.min.36c061153203db94fc1169914d07c49c3a537a11316e9ffbd4c7a511df482d8d.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="//localhost:1313/">
+                <span>princeton-strong@deep-space-nine ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="//localhost:1313/about" title="" >
+                        ~/about</a>
+                </li>
+                
+                <li>
+                    <a href="//localhost:1313/cinema" title="" >
+                        ~/cinema</a>
+                </li>
+                
+                <li>
+                    <a href="//localhost:1313/linux" title="" >
+                        ~/linux</a>
+                </li>
+                
+                <li>
+                    <a href="//localhost:1313/books" title="" >
+                        ~/books</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+    <h1>10 Commonly Used Linux Commands</h1>
+    
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/linux/">#Linux</a></dd>
+            
+            
+            
+            
+                <dt>published</dt>
+                
+                <dd><time datetime="0001-01-01">January 1, 1</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>4 minutes</dd>
+            
+        </dl>
+    </section>
+    
+    <div>
+        <p>Linux is a powerful, flexible, and <strong>free</strong> operating system. Its command-line interface (CLI) is a gateway to unmatched control and efficiency for users, developers, and system administrators. However, for newcomers, the array of commands can seem daunting. This blog will explore the <strong>10 most commonly used Linux commands</strong>, breaking them down with explanations, use cases, and examples.</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#introduction-to-linux-commands">Introduction to Linux Commands</a></li>
+<li><a href="#1-ls">Command 1: <code>ls</code></a></li>
+<li><a href="#2-cd">Command 2: <code>cd</code></a></li>
+<li><a href="#3-pwd">Command 3: <code>pwd</code></a></li>
+<li><a href="#4-touch">Command 4: <code>touch</code></a></li>
+<li><a href="#5-cp">Command 5: <code>cp</code></a></li>
+<li><a href="#6-mv">Command 6: <code>mv</code></a></li>
+<li><a href="#7-rm">Command 7: <code>rm</code></a></li>
+<li><a href="#8-cat">Command 8: <code>cat</code></a></li>
+<li><a href="#9-grep">Command 9: <code>grep</code></a></li>
+<li><a href="#10-sudo">Command 10: <code>sudo</code></a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+<hr>
+<h2 id="introduction-to-linux-commands">Introduction to Linux Commands</h2>
+<p>Linux commands form the backbone of the system, allowing users to perform tasks like navigating directories, managing files, and configuring the system. While graphical interfaces are available, the CLI remains indispensable due to its speed, flexibility, and scripting capabilities.</p>
+<p>Below, we dive into the 10 most widely used Linux commands. Each command includes:</p>
+<ul>
+<li><strong>What It Does</strong></li>
+<li><strong>Common Flags or Options</strong></li>
+<li><strong>Examples of Usage</strong></li>
+</ul>
+<hr>
+<h2 id="1-ls">1. <code>ls</code></h2>
+<h3 id="purpose-list-files-and-directories"><strong>Purpose</strong>: List files and directories.</h3>
+<p>The <code>ls</code> command is used to display the contents of a directory. It&rsquo;s often the first command you&rsquo;ll run to inspect what files or subdirectories are present.</p>
+<h3 id="syntax"><strong>Syntax</strong>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>DIRECTORY<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h3 id="common-options"><strong>Common Options</strong>:</h3>
+<ul>
+<li><code>-l</code>: Displays detailed information (permissions, owner, size, etc.).</li>
+<li><code>-a</code>: Lists all files, including hidden ones.</li>
+<li><code>-h</code>: Formats file sizes in a human-readable manner.</li>
+</ul>
+<h3 id="examples"><strong>Examples</strong>:</h3>
+<ol>
+<li>List files in the current directory:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls
+</span></span></code></pre></div></li>
+<li>Display detailed information about files:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -l
+</span></span></code></pre></div></li>
+<li>List all files, including hidden ones:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -a
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="2-cd">2. <code>cd</code></h2>
+<h3 id="purpose-change-directory"><strong>Purpose</strong>: Change directory.</h3>
+<p>The <code>cd</code> command allows you to navigate through directories in the Linux file system.</p>
+<h3 id="syntax-1"><strong>Syntax</strong>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd <span style="color:#f92672">[</span>DIRECTORY<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h3 id="examples-1"><strong>Examples</strong>:</h3>
+<ol>
+<li>Move to a specific directory:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/user/Documents
+</span></span></code></pre></div></li>
+<li>Navigate to the parent directory:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ..
+</span></span></code></pre></div></li>
+<li>Return to the home directory:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="3-pwd">3. <code>pwd</code></h2>
+<h3 id="purpose-print-the-current-working-directory"><strong>Purpose</strong>: Print the current working directory.</h3>
+<p>The <code>pwd</code> command displays the full path of the directory you are currently in.</p>
+<h3 id="syntax-2"><strong>Syntax</strong>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pwd
+</span></span></code></pre></div><h3 id="example"><strong>Example</strong>:</h3>
+<ol>
+<li>Display the current directory:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pwd
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="4-touch">4. <code>touch</code></h2>
+<h3 id="purpose-create-empty-files-or-update-file-timestamps"><strong>Purpose</strong>: Create empty files or update file timestamps.</h3>
+<p>The <code>touch</code> command is commonly used to create new, empty files or update the last modified timestamp of an existing file.</p>
+<h3 id="syntax-3"><strong>Syntax</strong>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch <span style="color:#f92672">[</span>FILENAME<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h3 id="examples-2"><strong>Examples</strong>:</h3>
+<ol>
+<li>Create a new file:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch newfile.txt
+</span></span></code></pre></div></li>
+<li>Update the timestamp of an existing file:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch existingfile.txt
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="5-cp">5. <code>cp</code></h2>
+<h3 id="purpose-copy-files-and-directories"><strong>Purpose</strong>: Copy files and directories.</h3>
+<p>The <code>cp</code> command is used to duplicate files or directories.</p>
+<h3 id="syntax-4"><strong>Syntax</strong>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> SOURCE DESTINATION
+</span></span></code></pre></div><h3 id="common-options-1"><strong>Common Options</strong>:</h3>
+<ul>
+<li><code>-r</code>: Copies directories recursively.</li>
+<li><code>-v</code>: Displays detailed information about the copying process.</li>
+</ul>
+<h3 id="examples-3"><strong>Examples</strong>:</h3>
+<ol>
+<li>Copy a file:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp file.txt backup.txt
+</span></span></code></pre></div></li>
+<li>Copy a directory recursively:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp -r /source/directory /destination/directory
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="6-mv">6. <code>mv</code></h2>
+<h3 id="purpose-move-or-rename-files-and-directories"><strong>Purpose</strong>: Move or rename files and directories.</h3>
+<p>The <code>mv</code> command is used for relocating files or directories, or renaming them.</p>
+<h3 id="syntax-5"><strong>Syntax</strong>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> SOURCE DESTINATION
+</span></span></code></pre></div><h3 id="examples-4"><strong>Examples</strong>:</h3>
+<ol>
+<li>Move a file to another directory:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv file.txt /home/user/backup/
+</span></span></code></pre></div></li>
+<li>Rename a file:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv oldname.txt newname.txt
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="7-rm">7. <code>rm</code></h2>
+<h3 id="purpose-remove-files-or-directories"><strong>Purpose</strong>: Remove files or directories.</h3>
+<p>The <code>rm</code> command deletes files or directories.</p>
+<h3 id="syntax-6"><strong>Syntax</strong>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> FILE
+</span></span></code></pre></div><h3 id="common-options-2"><strong>Common Options</strong>:</h3>
+<ul>
+<li><code>-r</code>: Removes directories and their contents recursively.</li>
+<li><code>-f</code>: Forces deletion without prompts.</li>
+</ul>
+<h3 id="examples-5"><strong>Examples</strong>:</h3>
+<ol>
+<li>Remove a file:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm file.txt
+</span></span></code></pre></div></li>
+<li>Remove a directory and its contents:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -r /directory
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="8-cat">8. <code>cat</code></h2>
+<h3 id="purpose-concatenate-and-display-file-contents"><strong>Purpose</strong>: Concatenate and display file contents.</h3>
+<p>The <code>cat</code> command is often used to view the contents of a file or combine multiple files into one.</p>
+<h3 id="syntax-7"><strong>Syntax</strong>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>FILES<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h3 id="examples-6"><strong>Examples</strong>:</h3>
+<ol>
+<li>Display the content of a file:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat file.txt
+</span></span></code></pre></div></li>
+<li>Combine multiple files into one:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat file1.txt file2.txt &gt; combined.txt
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="9-grep">9. <code>grep</code></h2>
+<h3 id="purpose-search-for-text-in-files"><strong>Purpose</strong>: Search for text in files.</h3>
+<p>The <code>grep</code> command searches for a specified pattern within files and prints the matching lines.</p>
+<h3 id="syntax-8"><strong>Syntax</strong>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> PATTERN <span style="color:#f92672">[</span>FILE<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h3 id="common-options-3"><strong>Common Options</strong>:</h3>
+<ul>
+<li><code>-i</code>: Case-insensitive search.</li>
+<li><code>-r</code>: Searches recursively in directories.</li>
+<li><code>-n</code>: Displays line numbers with matches.</li>
+</ul>
+<h3 id="examples-7"><strong>Examples</strong>:</h3>
+<ol>
+<li>Search for a word in a file:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep <span style="color:#e6db74">&#34;searchword&#34;</span> file.txt
+</span></span></code></pre></div></li>
+<li>Perform a case-insensitive search:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep -i <span style="color:#e6db74">&#34;searchword&#34;</span> file.txt
+</span></span></code></pre></div></li>
+<li>Search recursively in directories:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grep -r <span style="color:#e6db74">&#34;searchword&#34;</span> /directory
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="10-sudo">10. <code>sudo</code></h2>
+<h3 id="purpose-execute-commands-as-a-superuser"><strong>Purpose</strong>: Execute commands as a superuser.</h3>
+<p>The <code>sudo</code> command grants administrative privileges to execute commands requiring higher permissions.</p>
+<h3 id="syntax-9"><strong>Syntax</strong>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo <span style="color:#f92672">[</span>COMMAND<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h3 id="examples-8"><strong>Examples</strong>:</h3>
+<ol>
+<li>Install a package:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install package-name
+</span></span></code></pre></div></li>
+<li>Edit a file with elevated permissions:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/config-file
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>These <strong>10 Linux commands</strong> form the foundation of mastering the Linux command-line interface. Whether you&rsquo;re navigating directories with <code>cd</code>, managing files with <code>cp</code> and <code>mv</code>, or using <code>sudo</code> for administrative tasks, these commands are essential tools for daily tasks.</p>
+<p>Understanding and practicing these commands will boost your productivity and confidence in using Linux. For more advanced functionality, each command offers numerous flags and options, enabling tailored and powerful operations. When in doubt, the man pages are an excellent source of help.</p>
+<p>Ready to master Linux? Try these commands today and unlock the full potential of your system!</p>
+
+    </div>
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2024 Terok Noir, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

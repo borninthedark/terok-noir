@@ -1,0 +1,50 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Terok Noir'
+theme = 'nightfall'
+
+[menu]
+  [[menu.header]]
+    name = "books"
+    weight = 0
+    url = "books"
+  [[menu.header]]
+    name = "about"
+    weight = 1
+    url = "about"
+  [[menu.header]]
+    name = "cinema"
+    weight = 2
+    url = "cinema"
+  [[menu.header]]
+    name = "linux"
+    weight = 3
+    url = "linux"
+
+[params]
+user = "princeton-strong"
+hostname = "deep-space-nine"
+  [params.author]
+    name = "Terok Noir"  # Website and RSS feed author
+    email = "princeton.strong@outlook.com"  # RSS feed email address
+
+
+readingTime = true  # Show reading time on post page
+published = true  # Show published data on post page
+
+[[params.social]]
+key = 0
+name = "github"
+url = "https://github.com/gohugoio"
+target = "_blank"
+aria = "GitHub Profile"
+
+[[params.social]]
+key = 1
+name = "email"
+url = "mailto:email@example.com"
+aria = "My e-Mail Address"
+
+[module]
+[[module.imports]]
+  path = 'github.com/LordMathis/hugo-theme-nightfall'

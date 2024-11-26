@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Some Notes on Installing Arch Linux with LVM on LUKS, BTRFS, and Systemd-Boot on SSD | Terok Noir
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.139.0">
+
+
+<link rel="canonical" href="//localhost:1313/linux/archlinux/stylish-arch-doc-1/" >
+
+
+
+
+<link href="/css/style.min.36c061153203db94fc1169914d07c49c3a537a11316e9ffbd4c7a511df482d8d.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="//localhost:1313/">
+                <span>princeton-strong@deep-space-nine ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="//localhost:1313/about" title="" >
+                        ~/about</a>
+                </li>
+                
+                <li>
+                    <a href="//localhost:1313/cinema" title="" >
+                        ~/cinema</a>
+                </li>
+                
+                <li>
+                    <a href="//localhost:1313/linux" title="" >
+                        ~/linux</a>
+                </li>
+                
+                <li>
+                    <a href="//localhost:1313/books" title="" >
+                        ~/books</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+    <h1>Some Notes on Installing Arch Linux with LVM on LUKS, BTRFS, and Systemd-Boot on SSD</h1>
+    
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/archlinux/">#Archlinux</a></dd>
+            
+            
+            
+            
+                <dt>published</dt>
+                
+                <dd><time datetime="0001-01-01">January 1, 1</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>4 minutes</dd>
+            
+        </dl>
+    </section>
+    
+    <div>
+        <p>I love Arch Linux for its simplicity, flexibility, and bleeding-edge software. Plus, it&rsquo;s a distro with great memes. However, its installation process can be intimidating, especially when incorporating advanced features like <strong>LVM on LUKS</strong>, <strong>the BTRFS file system</strong>, and <strong>systemd-boot</strong> for an encrypted, robust, and modern system. This guide will walk you through the entire process of installing Arch Linux on a solid-state drive (SSD) with these basic configurations.</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#booting-into-the-live-environment">Booting into the Live Environment</a></li>
+<li><a href="#setting-up-disk-partitions">Setting Up Disk Partitions</a></li>
+<li><a href="#setting-up-luks-encryption">Setting Up LUKS Encryption</a></li>
+<li><a href="#configuring-lvm-logical-volume-manager">Configuring LVM (Logical Volume Manager)</a></li>
+<li><a href="#formatting-with-btrfs">Formatting with BTRFS</a></li>
+<li><a href="#mounting-partitions">Mounting Partitions</a></li>
+<li><a href="#installing-essential-packages">Installing Essential Packages</a></li>
+<li><a href="#configuring-systemd-boot">Configuring systemd-boot</a></li>
+<li><a href="#generating-filesystem-snapshots-with-btrfs">Generating Filesystem Snapshots with BTRFS</a></li>
+<li><a href="#final-steps">Final Steps</a></li>
+<li><a href="#post-installation-tasks">Post-Installation Tasks</a></li>
+</ol>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before you start, ensure you have the following:</p>
+<ul>
+<li>A live Arch Linux ISO burned to a USB drive.</li>
+<li>A reliable internet connection.</li>
+<li>Basic familiarity with the Linux command line.</li>
+</ul>
+<h3 id="recommended-partition-scheme">Recommended Partition Scheme</h3>
+<p>We&rsquo;ll use the following partition layout:</p>
+<ul>
+<li><strong>EFI Partition</strong>: <code>/dev/sdX1</code> (mounted as <code>/boot</code>)</li>
+<li><strong>Encrypted Partition</strong>: <code>/dev/sdX2</code> (contains LVM volumes)
+<ul>
+<li>Root (<code>/</code>): Logical volume formatted with BTRFS.</li>
+<li>Swap: Logical volume for swap space.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="booting-into-the-live-environment">Booting into the Live Environment</h2>
+<ol>
+<li>Insert your bootable USB and start your system. Select the USB as the boot device.</li>
+<li>Once in the Arch live environment, verify your internet connection:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping -c <span style="color:#ae81ff">3</span> archlinux.org
+</span></span></code></pre></div>If needed, set up Wi-Fi:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iwctl
+</span></span></code></pre></div>Inside <code>iwctl</code>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>station wlan0 connect <span style="color:#e6db74">&#34;YourSSID&#34;</span>
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="setting-up-disk-partitions">Setting Up Disk Partitions</h2>
+<ol>
+<li>Identify your disk:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsblk
+</span></span></code></pre></div></li>
+<li>Launch <code>fdisk</code> to create a GPT partition table:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fdisk /dev/sdX
+</span></span></code></pre></div></li>
+<li>Create partitions:
+<ul>
+<li><strong>Partition 1</strong>: EFI partition (512 MB, type <code>EFI System</code>).</li>
+<li><strong>Partition 2</strong>: Encrypted partition (remaining space).</li>
+</ul>
+</li>
+</ol>
+<h3 id="example-using-fdisk">Example using <code>fdisk</code>:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>g <span style="color:#75715e"># Create a new GPT table</span>
+</span></span><span style="display:flex;"><span>n <span style="color:#75715e"># Create EFI partition</span>
+</span></span><span style="display:flex;"><span>+512M
+</span></span><span style="display:flex;"><span>t <span style="color:#75715e"># Change partition type</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#75715e"># Set type to EFI System</span>
+</span></span><span style="display:flex;"><span>n <span style="color:#75715e"># Create LUKS partition (use default size for the rest of the disk)</span>
+</span></span><span style="display:flex;"><span>t <span style="color:#75715e"># Change type</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">44</span> <span style="color:#75715e"># Set type to Linux LVM</span>
+</span></span><span style="display:flex;"><span>w <span style="color:#75715e"># Write changes</span>
+</span></span></code></pre></div><hr>
+<h2 id="setting-up-luks-encryption">Setting Up LUKS Encryption</h2>
+<ol>
+<li>Initialize LUKS encryption on the second partition:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cryptsetup luksFormat /dev/sdX2
+</span></span></code></pre></div><ul>
+<li>Confirm the operation and set a passphrase.</li>
+</ul>
+</li>
+<li>Open the LUKS container:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cryptsetup open /dev/sdX2 cryptlvm
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="configuring-lvm-logical-volume-manager">Configuring LVM (Logical Volume Manager)</h2>
+<ol>
+<li>Initialize the LVM physical volume:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pvcreate /dev/mapper/cryptlvm
+</span></span></code></pre></div></li>
+<li>Create a volume group:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vgcreate vg0 /dev/mapper/cryptlvm
+</span></span></code></pre></div></li>
+<li>Create logical volumes:
+<ul>
+<li>Root:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lvcreate -L 30G -n root vg0
+</span></span></code></pre></div></li>
+<li>Swap:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lvcreate -L 4G -n swap vg0
+</span></span></code></pre></div></li>
+<li>(Optional) Home:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lvcreate -l 100%FREE -n home vg0
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="formatting-with-btrfs">Formatting with BTRFS</h2>
+<ol>
+<li>Format the EFI partition as FAT32:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkfs.fat -F32 /dev/sdX1
+</span></span></code></pre></div></li>
+<li>Format the root volume as BTRFS:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkfs.btrfs /dev/vg0/root
+</span></span></code></pre></div></li>
+<li>(Optional) Format the home volume as BTRFS:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkfs.btrfs /dev/vg0/home
+</span></span></code></pre></div></li>
+<li>Initialize swap space:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkswap /dev/vg0/swap
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="mounting-partitions">Mounting Partitions</h2>
+<ol>
+<li>Mount the root volume:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mount /dev/vg0/root /mnt
+</span></span></code></pre></div></li>
+<li>Create and mount subvolumes:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>btrfs subvolume create /mnt/@
+</span></span><span style="display:flex;"><span>btrfs subvolume create /mnt/@home
+</span></span><span style="display:flex;"><span>btrfs subvolume create /mnt/@snapshots
+</span></span><span style="display:flex;"><span>umount /mnt
+</span></span><span style="display:flex;"><span>mount -o noatime,compress<span style="color:#f92672">=</span>zstd,subvol<span style="color:#f92672">=</span>@ /dev/vg0/root /mnt
+</span></span><span style="display:flex;"><span>mkdir -p /mnt/<span style="color:#f92672">{</span>boot,home,.snapshots<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>mount -o noatime,compress<span style="color:#f92672">=</span>zstd,subvol<span style="color:#f92672">=</span>@home /dev/vg0/home /mnt/home
+</span></span></code></pre></div></li>
+<li>Mount the EFI partition:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mount /dev/sdX1 /mnt/boot
+</span></span></code></pre></div></li>
+<li>Enable swap:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>swapon /dev/vg0/swap
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="installing-essential-packages">Installing Essential Packages</h2>
+<ol>
+<li>Install the base system:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pacstrap /mnt base linux linux-firmware btrfs-progs lvm2 vim
+</span></span></code></pre></div></li>
+<li>Generate the fstab file:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</span></span></code></pre></div>Verify the <code>fstab</code> entries to ensure the subvolumes and mount options are correct.</li>
+</ol>
+<hr>
+<h2 id="configuring-systemd-boot">Configuring systemd-boot</h2>
+<ol>
+<li>Chroot into the new system:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>arch-chroot /mnt
+</span></span></code></pre></div></li>
+<li>Install systemd-boot:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bootctl install
+</span></span></code></pre></div></li>
+<li>Create a boot entry for Arch Linux:
+<ul>
+<li>Edit <code>/boot/loader/loader.conf</code>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>default arch
+</span></span><span style="display:flex;"><span>timeout 3
+</span></span><span style="display:flex;"><span>editor 0
+</span></span></code></pre></div></li>
+<li>Create <code>/boot/loader/entries/arch.conf</code>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>title Arch Linux
+</span></span><span style="display:flex;"><span>linux /vmlinuz-linux
+</span></span><span style="display:flex;"><span>initrd /initramfs-linux.img
+</span></span><span style="display:flex;"><span>options cryptdevice=/dev/sdX2:cryptlvm root=/dev/vg0/root rw
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="generating-filesystem-snapshots-with-btrfs">Generating Filesystem Snapshots with BTRFS</h2>
+<ol>
+<li>Install the <code>snapper</code> package:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pacman -S snapper
+</span></span></code></pre></div></li>
+<li>Create a configuration for root:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>snapper -c root create-config /
+</span></span></code></pre></div></li>
+<li>Adjust the configuration file <code>/etc/snapper/configs/root</code> as needed.</li>
+</ol>
+<hr>
+<h2 id="final-steps">Final Steps</h2>
+<ol>
+<li>Set the root password:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>passwd
+</span></span></code></pre></div></li>
+<li>Enable essential services:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl enable systemd-networkd
+</span></span><span style="display:flex;"><span>systemctl enable systemd-resolved
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="post-installation-tasks">Post-Installation Tasks</h2>
+<ol>
+<li>Boot into your system and verify everything is functioning:
+<ul>
+<li>Ensure the encryption prompt appears.</li>
+<li>Confirm the BTRFS subvolumes are mounted correctly.</li>
+</ul>
+</li>
+<li>Update the system:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pacman -Syu
+</span></span></code></pre></div></li>
+<li>Install additional software as needed:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pacman -S networkmanager git base-devel
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<p>By following this guide, you now have a secure Arch Linux installation with <strong>LVM on LUKS</strong>, <strong>BTRFS</strong>, and <strong>systemd-boot</strong>, optimized for modern SSDs. This setup provides encryption for data security, snapshots for easy backup and rollback, and systemd-boot for a lightweight bootloader experience.</p>
+<p>Feel confident in when you tell someone, &ldquo;I use Arch, BTW&rdquo;, you&rsquo;ll mean it.</p>
+
+    </div>
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2024 Terok Noir, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> and
+            <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>
