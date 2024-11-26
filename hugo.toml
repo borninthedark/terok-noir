@@ -1,6 +1,6 @@
 baseURL = '/'
 languageCode = 'en-us'
-title = 'Terok Noir'
+title = 'The Sky Pirate's Den'
 theme = 'nightfall'
 
 [menu]
@@ -25,7 +25,7 @@ theme = 'nightfall'
 user = "princeton-strong"
 hostname = "deep-space-nine"
   [params.author]
-    name = "Terok Noir"  # Website and RSS feed author
+    name = "The Sky Pirate's Den"  # Website and RSS feed author
     email = "princeton.strong@outlook.com"  # RSS feed email address
 
 
