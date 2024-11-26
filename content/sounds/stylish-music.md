@@ -1,6 +1,6 @@
 +++
 title = 'Stylish Ear Candy, Ep. 1'
-tags = 'soundss'
+tags = 'sounds'
 slug = 'stylish-beats-1'
 summary = 'Stylish Music Across the Eras'
 +++
