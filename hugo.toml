@@ -9,13 +9,13 @@ theme = 'nightfall'
     weight = 0
     url = "books"
   [[menu.header]]
-    name = "about"
-    weight = 1
-    url = "about"
-  [[menu.header]]
     name = "cinema"
-    weight = 2
+    weight = 1
     url = "cinema"
+  [[menu.header]]
+    name = "music"
+    weight = 2
+    url = "music"
   [[menu.header]]
     name = "linux"
     weight = 3
