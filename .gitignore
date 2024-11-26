@@ -37,8 +37,6 @@ coverage.xml
 *.log
 docs/_build/
 target/
-pelican-plugins
-themes
 .venv/
 venv/
 output
