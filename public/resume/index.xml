@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resumes on Terok Noir</title>
+    <link>//localhost:1313/resume/</link>
+    <description>Recent content in Resumes on Terok Noir</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>princeton.strong@outlook.com (Terok Noir)</managingEditor>
+    <webMaster>princeton.strong@outlook.com (Terok Noir)</webMaster>
+    <atom:link href="//localhost:1313/resume/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>//localhost:1313/resume/stylish-resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>princeton.strong@outlook.com (Terok Noir)</author>
+      <guid>//localhost:1313/resume/stylish-resume/</guid>
+      <description>&lt;p&gt;Title:&#xA;Category: Resume&#xA;Tags: publish, self, resume&#xA;Slug: stylish-resume&#xA;Summary: My certifcations, qualifications, and experience.&lt;/p&gt;&#xA;&lt;h2 id=&#34;center-active-certifications-center&#34;&gt;&lt;!-- raw HTML omitted --&gt; Active Certifications &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;CNCF&lt;/strong&gt; | Certified Kubernetes Administrator, Certified Kubernetes&#xA;Application Developer&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;AWS&lt;/strong&gt; | Cloud Practitioner, Solutions Architect &amp;ndash; Associate&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Microsoft&lt;/strong&gt; | Azure Administrator, Azure DevOps Engineer Expert&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;The Linux Foundation&lt;/strong&gt; | Certified System Administrator&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;HashiCorp&lt;/strong&gt; | Terraform Associate&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;CloudBees&lt;/strong&gt; | Jenkins Engineer&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
