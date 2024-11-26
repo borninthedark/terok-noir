@@ -14,9 +14,9 @@ pluralizelisttitles = false
     weight = 1
     url = "cinema"
   [[menu.header]]
-    name = "music"
+    name = "sounds"
     weight = 2
-    url = "music"
+    url = "sounds"
   [[menu.header]]
     name = "linux"
     weight = 3
