@@ -49,6 +49,10 @@ name = "email"
 url = "mailto:princeton.strong@outlook.com"
 aria = "My e-Mail Address"
 
+[params]
+footerHtml = 'CC-0, Terok Noir'
+
+
 [module]
 [[module.imports]]
   path = 'github.com/LordMathis/hugo-theme-nightfall'
