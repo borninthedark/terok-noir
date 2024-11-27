@@ -1,4 +1,5 @@
 +++
+date = '{{ .Date | time.Format ":date_medium" }}'
 title = 'Stylish Neural Netflix, Ep. 1'
 tags = ['style', 'science-fiction', 'books']
 slug = 'stylish-book-1'
