@@ -20,21 +20,17 @@ published = true  # Show published data on post page
 
 [menu]
   [[menu.header]]
-    name = "books"
-    weight = 1
-    url = "books"
-  [[menu.header]]
-    name = "cinema"
-    weight = 2
-    url = "cinema"
-  [[menu.header]]
-    name = "sounds"
+    name = "art"
     weight = 0
-    url = "sounds"
+    url = "art"
   [[menu.header]]
-    name = "linux"
-    weight = 3
-    url = "linux"
+    name = "tech"
+    weight = 1
+    url = "tech"
+  [[menu.header]]
+    name = "about"
+    weight = 2
+    url = "about"
 
 [params]
 user = "elim.garak"
