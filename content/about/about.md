@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 date: 2024-11-27
-slug: "about"
+slug: "me"
 aliases: ["about", "contact"]
 ---
 
