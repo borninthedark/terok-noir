@@ -213,4 +213,6 @@ To style the "About Me" page:
 
 ## Conclusion
 
-Setting up Hugo allows you to build a fast, customizable website with ease. By configuring a theme, optimizing front matter, and creating a personalized "About Me" page, you can craft a professional site tailored to your needs (hint hint). In future installments, I'll be exploring and implementing additional Hugo features like shortcodes & custom layouts to enhance this site further.
+Setting up Hugo allows you to build a fast, customizable website with ease. By configuring a theme, optimizing front matter, and creating a personalized "About Me" page, you can craft a professional site tailored to your needs (hint hint). 
+
+In future installments, I'll be exploring and implementing additional Hugo features like shortcodes, custom datetime formats in front matter, defining front matter in the root Hugo config, & custom layouts to enhance this site further.
