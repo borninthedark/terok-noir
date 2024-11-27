@@ -28,6 +28,7 @@ timeZone = 'America/Vancouver'
 [params]
 user = "princeton.strong"
 hostname = "obsidian-order"
+footerHtml = 'CC-0, Terok Noir'
   [params.author]
     name = "Terok Noir"  # Website and RSS feed author
     email = "princeton.strong@outlook.com"  # RSS feed email address
@@ -48,10 +49,6 @@ key = 1
 name = "email"
 url = "mailto:princeton.strong@outlook.com"
 aria = "My e-Mail Address"
-
-[params]
-footerHtml = 'CC-0, Terok Noir'
-
 
 [module]
 [[module.imports]]
