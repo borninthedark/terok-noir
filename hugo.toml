@@ -26,12 +26,15 @@ timeZone = 'America/Vancouver'
     url = "linux"
 
 [params]
-user = "princeton.strong"
+user = "elim.garak"
 hostname = "obsidian-order"
-footerHtml = '© 2024, Princeton Strong'
+footerHtml = '© 2024, Princeton Strong All rights reserved. Powered by Hugo and Nightfall.'
+dateFormat = "02 Jan 2006"
   [params.author]
     name = "Terok Noir"  # Website and RSS feed author
     email = "princeton.strong@outlook.com"  # RSS feed email address
+
+
 
 
 readingTime = true  # Show reading time on post page
