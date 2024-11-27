@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 2;
+    text-align: left;
+}
+
+.about-picture {
+    flex: 1;
+    text-align: right;
+}
+
+.about-picture img {
+    max-width: 150px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
