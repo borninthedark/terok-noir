@@ -1,5 +1,5 @@
 +++
-title = 'Stylish Science Fiction, Ep. 1'
+title = 'Stylish Cinema, Ep. 1'
 tags = ['style', 'science-fiction', 'tv']
 slug =  'stylish-scifi-1'
 summary = 'Some stylish science-fiction to engage your imagination.' 

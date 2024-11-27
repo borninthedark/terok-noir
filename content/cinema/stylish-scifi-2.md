@@ -1,8 +1,8 @@
 +++
-title = 'Stylish Science Fiction, Ep. 2'
+title = 'Stylish Cinema, Ep. 2'
 tags = ['style', 'science-fiction', 'tv']
 slug =  'stylish-scifi-2'
-summary = 'Some stylish science-fiction to engage your imagination.' 
+summary = 'Some stylish thought-provoking science-fiction to engage your imagination.' 
 +++
 
 # My Review of *Star Trek: Deep Space Nine* - "Past Tense, Part 2"
