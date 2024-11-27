@@ -1,6 +1,7 @@
 ---
 title: "About Me"
 date: 2024-11-27
+tags: ['hello-world']
 slug: "me"
 aliases: ["about", "contact"]
 ---
