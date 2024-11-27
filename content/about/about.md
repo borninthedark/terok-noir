@@ -5,18 +5,17 @@ slug: "about"
 aliases: ["about", "contact"]
 ---
 
-# About Me
-
-Hello! I’m **Princeton A. Strong**, a passionate technologist with a proven track record in cloud architecture, DevOps, and security engineering. My journey is shaped by a deep curiosity for solving complex problems, crafting innovative solutions, and enabling teams to thrive through collaboration and shared knowledge.
+I’m **Princeton A. Strong**, a passionate technologist with a proven track record in cloud architecture, DevOps, and security engineering. My journey is shaped by a deep curiosity for solving complex problems, crafting innovative solutions, and enabling teams to thrive through collaboration and shared knowledge.
 
 ## Professional Life  
 Over the years, I’ve honed my skills across a spectrum of technical domains, from designing scalable AWS infrastructures and implementing Terraform policies to optimizing CI/CD pipelines and integrating security-compliance metrics. I take pride in blending technical expertise with strategic foresight to deliver solutions that are not only efficient but also cost-effective. 
 
 ### Career Highlights
-- Achieving certifications such as AWS Solutions Architect, Certified Kubernetes Administrator, and the LFCS.
+- Accomplishing goals such as AWS Solutions Architect, Certified Kubernetes Administrator, and the LFCS.
 - Architecting robust automated cloud environments for mission-critical applications.
 - Spearheading DevSecOps initiatives to align security with agile development practices.  
 - Being privileged enough to host training sessions to build stronger & more informed teams.
+- Learning every step of the way. 
 
 ## There Is More to Life Than The Digital Estate 
 When I’m not building or automating, you’ll find me immersing myself in life. 
