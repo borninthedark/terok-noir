@@ -12,10 +12,8 @@ buildFuture = false
 buildExpired = true
 
 [frontmatter]
-  date = ['date', 'publishDate', 'lastmod']
-  expiryDate = ['expiryDate']
-  lastmod = [':git', 'lastmod', 'date', 'publishDate']
-  publishDate = ['publishDate', 'date']
+  date = ["publishDate", ":default"]
+  lastmod = ["publishDate", ":default"]
 
 [menu]
   [[menu.header]]
