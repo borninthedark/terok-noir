@@ -28,7 +28,7 @@ timeZone = 'America/Vancouver'
 [params]
 user = "princeton.strong"
 hostname = "obsidian-order"
-footerHtml = '2024, Princeton Strong'
+footerHtml = '© 2024, Princeton Strong'
   [params.author]
     name = "Terok Noir"  # Website and RSS feed author
     email = "princeton.strong@outlook.com"  # RSS feed email address
