@@ -1,7 +1,6 @@
 ---
 title: "About Me"
 date: 2024-11-27
-layout: "about"
 ---
 
 # About Me
@@ -17,8 +16,8 @@ Over the years, I’ve honed my skills across a spectrum of technical domains, f
 - Spearheading DevSecOps initiatives to align security with agile development practices.  
 - Being privileged enough to host training sessions to build stronger & more informed teams.
 
-## Beyond the Keyboard  
-When I’m not building or automating, you’ll find me immersing myself in my passions: **music, art, and nature**.  
+## There Is More to Life Than The Digital Estate 
+When I’m not building or automating, you’ll find me immersing myself in life. 
 
 ### Music  
 Whether it's attending a live jazz performance, exploring the depths of classical compositions, or tinkering with my own melodies as an amateur DJ while listening to Yellow Magic Orchestra or Prince, music fuels my creativity and focus. It’s where technology and humanity converge, inspiring both my work and personal life.  
