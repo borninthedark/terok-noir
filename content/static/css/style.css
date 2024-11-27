@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color */
 }
 
 .about-container {
@@ -17,6 +19,7 @@ body {
 .about-text {
     flex: 2;
     text-align: left;
+    color: #e0e0e0; /* Slightly lighter text for better readability */
 }
 
 .about-picture {
@@ -27,5 +30,6 @@ body {
 .about-picture img {
     max-width: 150px;
     border-radius: 50%;
-    border: 2px solid #ddd;
+    border: 2px solid #444; /* Subtle border for dark theme */
+    background-color: #222; /* Ensure profile image container blends with theme */
 }
