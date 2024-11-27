@@ -14,7 +14,7 @@ buildExpired = true
 [frontmatter]
   date = [':git', ':fileModTime', ":default"]
   lastmod = [':git', ':fileModTime']
-  publishDate = [':git', ':fileModTime']
+
 
 [menu]
   [[menu.header]]
