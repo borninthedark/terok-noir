@@ -1,14 +1,11 @@
 +++
 title = "How to Weave Hugo Like a Boss, Ep. 1"
 date = 2024-11-27
-description = "A step-by-step guide to setting up the Hugo static site generator, including theme configuration, front matter setup, and creating a custom 'About Me' page."
+summary = "A step-by-step guide to setting up the Hugo static site generator, including theme configuration, front matter setup, and creating a custom 'About Me' page."
 tags = ["Hugo", "Static Site Generator", "Web"]
 categories = ["Web", "Tech"]
 slug = 'weave-hugo-1'
 +++
-
-
-# How to Set Up the Hugo Static Site Generator
 
 ## Table of Contents
 
