@@ -8,33 +8,42 @@ summary = 'Emotions can run hot, even in the cold depth of deep space.'
 # My Analysis & Review of *Star Trek: Deep Space Nine* – "Inter Arma Enim Silent Leges"
 
 ## Table of Contents
+
 1. **Introduction**
+
 2. **Summary of the Episode**
-3. **The Philosophical Core: "Inter Arma Enim Silent Leges"**
+
+3. **The Philosophical Core: “Inter Arma Enim Silent Leges”**
    - 3.1 Meaning of the Latin Phrase
    - 3.2 Its Role in Federation Politics
+
 4. **Admiral Ross vs. Dr. Bashir: A Conflict of Ethics**
    - 4.1 Admiral Ross: Pragmatism in Wartime
    - 4.2 Dr. Bashir: The Idealistic Physician
+
 5. **Section 31 and the Tal Shiar: A Study in Espionage**
-   - 5.1 Section 31: Federation's Shadow Operatives
-   - 5.2 The Tal Shiar: Romulan Intelligence and Koval's Role
+   - 5.1 Section 31: Federation’s Shadow Operatives
+   - 5.2 The Tal Shiar: Romulan Intelligence and Koval’s Role
+
 6. **Comparisons to the Current Political Climate**
    - 6.1 Espionage and Political Subversion Today
    - 6.2 Ethical Dilemmas in Wartime
+
 7. **Impact on Federation and Romulan Citizens**
-8. **Political Casualties and Moral Compromises**  
-   - 8.1 Individual Casualties: Koval and Sloan  
-   - 8.2 Ideological Casualties: Federation Principles  
-   - 8.3 Broader Political Consequences: The Federation and Romulan Relations  
-   - 8.4 The Human (and Romulan) Toll: We Didn't Ask For This  
-   - 8.5 The Moral Cost of Compromise  
-9. **Conclusion: The Cost of Security**  
-   - 9.1 The Uncertainty of Bashir’s Convictions  
-   - 9.2 The Fragile Line Between Ideals and Survival  
-   - 9.3 The Viewer’s Role: A Moral Mirror  
-   - 9.4 An Uncertain Future  
----
+
+8. **Political Casualties and Moral Compromises**
+   - 8.1 Individual Casualties: Koval and Sloan
+   - 8.2 Ideological Casualties: Federation Principles
+   - 8.3 Broader Political Consequences: The Federation and Romulan Relations
+   - 8.4 The Human (and Romulan) Toll: We Didn’t Ask For This
+   - 8.5 The Moral Cost of Compromise
+
+9. **Conclusion: The Cost of Security**
+   - 9.1 The Uncertainty of Bashir’s Convictions
+   - 9.2 The Fragile Line Between Ideals and Survival
+   - 9.3 The Viewer’s Role: A Moral Mirror
+   - 9.4 An Uncertain Future
+
 
 ## 1. Introduction
 
