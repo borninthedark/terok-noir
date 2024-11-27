@@ -40,7 +40,7 @@ published = true  # Show published data on post page
 user = "elim.garak"
 hostname = "obsidian-order"
 footerHtml = '© 2024, Princeton Strong - All rights reserved. Powered by Hugo and Nightfall.'
-dateFormat = "Mon Jan 2 15:04:05 MST 2006"
+dateFormat = "Jan 02, 2006 3:04 PM Z07:00"
   [params.author]
     name = "Terok Noir"  # Website and RSS feed author
     email = "princeton.strong@outlook.com"  # RSS feed email address
