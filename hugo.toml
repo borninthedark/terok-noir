@@ -5,7 +5,17 @@ theme = 'nightfall'
 pluralizelisttitles = false
 relativeURLs = true
 enableGitInfo = true
+enableRobotsTXT = true
 timeZone = 'America/Vancouver'
+buildDrafts = false
+buildFuture = false
+buildExpired = true
+
+[frontmatter]
+  date = ['date', 'publishDate', 'lastmod']
+  expiryDate = ['expiryDate']
+  lastmod = [':git', 'lastmod', 'date', 'publishDate']
+  publishDate = ['publishDate', 'date']
 
 [menu]
   [[menu.header]]
@@ -33,9 +43,6 @@ dateFormat = "02 Jan 2006"
   [params.author]
     name = "Terok Noir"  # Website and RSS feed author
     email = "princeton.strong@outlook.com"  # RSS feed email address
-
-
-
 
 readingTime = true  # Show reading time on post page
 published = true  # Show published data on post page
