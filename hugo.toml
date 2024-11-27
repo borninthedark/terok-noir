@@ -10,6 +10,8 @@ timeZone = 'America/Vancouver'
 buildDrafts = false
 buildFuture = false
 buildExpired = true
+readingTime = true  # Show reading time on post page
+published = true  # Show published data on post page
 
 [frontmatter]
   date = [':git', ':fileModTime', ":default"]
@@ -37,14 +39,11 @@ buildExpired = true
 [params]
 user = "elim.garak"
 hostname = "obsidian-order"
-footerHtml = '© 2024, Princeton Strong All rights reserved. Powered by Hugo and Nightfall.'
-dateFormat = "02 Jan 2006"
+footerHtml = '© 2024, Princeton Strong - All rights reserved. Powered by Hugo and Nightfall.'
+dateFormat = "Mon Jan 2 15:04:05 MST 2006"
   [params.author]
     name = "Terok Noir"  # Website and RSS feed author
     email = "princeton.strong@outlook.com"  # RSS feed email address
-
-readingTime = true  # Show reading time on post page
-published = true  # Show published data on post page
 
 [[params.social]]
 key = 0
