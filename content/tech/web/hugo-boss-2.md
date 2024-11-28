@@ -1,8 +1,8 @@
 +++
-title: "Weaving a Hugo Application in a Docker Container"
-date: 2024-11-27
-tags: ["Hugo", "Docker", "Web Development"]
-categories: ["Development"]
+title = "Weaving a Hugo Application in a Docker Container"
+date =  2024-11-27
+tags = ["Hugo", "Docker", "Web Development"]
+categories =  ["Development"]
 slug = 'weave-hugo-2'
 summary = 'Docker + Hugo: Absolutely Stylish'
 +++
