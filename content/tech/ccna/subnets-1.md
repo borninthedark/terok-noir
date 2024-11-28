@@ -39,7 +39,7 @@ summary = 'Come along while I stylishly study for the CCNA.'
 
 ## Introduction to Subnetting
 
-Subnetting is a critical skill for CCNA certification and a cornerstone of efficient network management. As y exam date approaches, I'm breaking down my knowledge for further evaluations.
+Subnetting is a critical skill for CCNA certification and a cornerstone of efficient network management. As my exam date approaches, I'm breaking down my knowledge for further evaluations.
 
 ---
 
