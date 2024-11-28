@@ -122,8 +122,8 @@ Open `http://localhost:1313` in your browser to see your masterpiece.
 To run Hugo within a Docker container, we need a `Dockerfile`. Create one in your Hugo site’s root directory:
 
 ```dockerfile
-# Use the official Hugo image
-FROM klakegg/hugo:ext
+# The 'official' image is VERY out of date
+FROM hugomods/hugo:latest
 
 # Set the working directory
 WORKDIR /usr/share/blog
