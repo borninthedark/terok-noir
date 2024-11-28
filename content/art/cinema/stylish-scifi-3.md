@@ -2,6 +2,7 @@
 title = 'Stylish Cinema, Ep. 3'
 tags = ['style', 'science-fiction', 'tv']
 slug =  'stylish-scifi-3'
+date = 2024-11-26
 summary = 'Emotions can run hot, even in the cold depth of deep space.' 
 +++
 

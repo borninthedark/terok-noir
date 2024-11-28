@@ -2,6 +2,7 @@
 title = '10 Commonly Used Linux Commands'
 tags = 'linux'
 slug = 'stylish-linux-1'
+date = 2024-11-24
 summary = 'Ten Linux commands to help you say hello to the world.'  
 +++
 

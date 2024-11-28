@@ -2,6 +2,7 @@
 title = 'Stylish Cinema, Ep. 2'
 tags = ['style', 'science-fiction', 'tv']
 slug =  'stylish-scifi-2'
+date = 2024-11-25
 summary = 'Some stylish thought-provoking science-fiction to engage your imagination.' 
 +++
 
