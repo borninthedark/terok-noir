@@ -1,5 +1,5 @@
 +++
-title = "Subnetting?!: My Conspiracy On How One Can Achieve CCNA Success"
+title = "Subnetting?! - How One Can Achieve Elegant CCNA Success"
 date = 2024-11-27
 tags = ["CCNA", "Subnetting", "Networking", "IPv4", "CIDR"]
 categories = ["Networking Basics"]
@@ -7,7 +7,6 @@ slug =  'stylish-subnets-1'
 summary = 'Come along while I stylishly study for the CCNA.' 
 +++
 
----
 
 ## Table of Contents
 1. [Introduction to Subnetting](#introduction-to-subnetting)
