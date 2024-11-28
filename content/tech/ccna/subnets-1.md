@@ -216,9 +216,7 @@ Each subnet has \( 2^h = 64 \) addresses:
 2. Hosts: \( 2^4 - 2 = 14 \).
 
 ---
-Here’s the expanded **Section 8: Common Subnetting Pitfalls**, with additional details, examples, and tips:
 
----
 
 ## Common Subnetting Pitfalls
 
