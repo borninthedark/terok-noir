@@ -1,11 +1,11 @@
 +++
 title = "Weaving a Hugo Application in a Docker Container"
-date =  2024-11-29
+date =  2024-11-28
 tags = ["Hugo", "Docker", "Web Development"]
 categories =  ["Development"]
 slug = 'weave-hugo-2'
-draft = true
-summary = 'Docker + Hugo: Absolutely Stylish'
+draft = false
+summary = 'Docker + Hugo: Absolutely Stylish Web Apps'
 +++
 
 Greetings! Today, I shall guide you through the delicate art of creating a Hugo application and running it within a Docker container. While some might find such endeavors purely technical, I prefer to think of it as using Hugo to weave a digital tapestry. 
@@ -56,10 +56,15 @@ If these are ready, you’re prepared for what lies ahead.
 
 First, let us ensure Hugo is installed on your system:
 
-1. **MacOS/Linux**: Use Homebrew or your package manager:
+1. **MacOS/Linux**: Use Homebrew or your distro's package manager:
    ```bash
    brew install hugo
    ```
+   I use Arch Linux, so I'd use:
+   ```bash
+   sudo pacman -S hugo
+   ```
+
    Alternatively, download the appropriate binary from the [Hugo releases page](https://github.com/gohugoio/hugo/releases).
 
 2. **Windows**: Download the installer or use `choco`:
