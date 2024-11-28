@@ -1,10 +1,10 @@
 +++
-title: "Subnetting?!: My Conspiracy For CCNA Success"
-date: 2024-11-27
-tags: ["CCNA", "Subnetting", "Networking", "IPv4", "CIDR"]
-categories: ["Networking Basics"]
+title = "Subnetting?!: My Conspiracy For CCNA Success"
+date = 2024-11-27
+tags = ["CCNA", "Subnetting", "Networking", "IPv4", "CIDR"]
+categories = ["Networking Basics"]
 slug =  'stylish-subnets-1'
-summary = 'Come along while I stylishly & furiously study for the CCNA.' 
+summary = 'Come along while I stylishly study for the CCNA.' 
 +++
 
 ---
