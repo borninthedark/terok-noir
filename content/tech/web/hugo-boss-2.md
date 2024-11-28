@@ -7,7 +7,9 @@ slug = 'weave-hugo-2'
 summary = 'Docker + Hugo: Absolutely Stylish'
 +++
 
-Greetings! Today, I shall guide you through the delicate art of creating a Hugo application and running it within a Docker container. While some might find such endeavors purely technical, I prefer to think of it as using hugo to weave a digital tapestry. Shall we begin?
+Greetings! Today, I shall guide you through the delicate art of creating a Hugo application and running it within a Docker container. While some might find such endeavors purely technical, I prefer to think of it as using Hugo to weave a digital tapestry. 
+
+Shall we begin?
 
 ---
 
